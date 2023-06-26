@@ -3,21 +3,50 @@
     <v-container>
       <v-row class="justify-center">
         <v-col cols="12" sm="6" class="text-center">
-          <a href="https://wa.me/+972584874474">
-            <svg-icon type="mdi" :path="pathWhatsapp" class="ml-10 mr-5 icon"></svg-icon>
-          </a>
-          <a href="https://www.linkedin.com/in/eliezer-tillmann-leiner-29951419a/">
-            <svg-icon type="mdi" :path="pathEmail" class="mr-5 icon" @click="sendEmailViaIcon"></svg-icon>
-          </a>
+           <v-hover>
+              <template v-slot:default="{ isHovering, props }">
+                <a href="https://wa.me/+972584874474">
+                  <svg-icon v-bind="props" :color="isHovering ? 'yellow' : '#8b008b'" type="mdi" :path="pathWhatsapp"
+                    class="mb-10 mr-5 icon"></svg-icon>
+                </a>
+              </template>
+            </v-hover>
 
-          <svg-icon type="mdi" :path="pathPhone" class="mr-5 icon" @click="callViaIcon"></svg-icon>
+            <v-hover>
+              <template v-slot:default="{ isHovering, props }">
+                <a href="https://www.linkedin.com/in/eliezer-tillmann-leiner-29951419a/">
+                  <svg-icon v-bind="props" :color="isHovering ? 'yellow' : '#8b008b'" type="mdi" :path="pathEmail"
+                    class="mb-10 mr-5 icon" @click="sendEmailViaIcon"></svg-icon>
+                </a>
+              </template>
+            </v-hover>
 
-          <a href="https://www.instagram.com/lazer_tillmann/">
-            <svg-icon type="mdi" :path="pathInstagram" class="mr-5 icon"></svg-icon>
-          </a>
-          <a href="https://www.linkedin.com/in/eliezer-tillmann-leiner-29951419a/">
-            <svg-icon type="mdi" :path="pathLinkedin" class="mr-5 icon"></svg-icon>
-          </a>
+            <v-hover>
+              <template v-slot:default="{ isHovering, props }">
+                <a href="tel:+972584874474">
+                  <svg-icon v-bind="props" :color="isHovering ? 'yellow' : '#8b008b'" type="mdi" :path="pathPhone"
+                    class="mb-10 mr-5 icon" @click="callViaIcon"></svg-icon>
+                </a>
+              </template>
+            </v-hover>
+
+            <v-hover>
+              <template v-slot:default="{ isHovering, props }">
+                <a href="https://www.instagram.com/lazer_tillmann/">
+                  <svg-icon v-bind="props" :color="isHovering ? 'yellow' : '#8b008b'" type="mdi" :path="pathInstagram"
+                    class="mb-10 mr-5 icon"></svg-icon>
+                </a>
+              </template>
+            </v-hover>
+
+            <v-hover>
+              <template v-slot:default="{ isHovering, props }">
+                <a href="https://www.linkedin.com/in/eliezer-tillmann-leiner-29951419a/">
+                  <svg-icon v-bind="props" :color="isHovering ? 'yellow' : '#8b008b'" type="mdi" :path="pathLinkedin"
+                    class="mb-10 mr-5 icon"></svg-icon>
+                </a>
+              </template>
+            </v-hover>
         </v-col>
       </v-row>
 
