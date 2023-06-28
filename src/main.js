@@ -14,7 +14,7 @@ const vuetify = createVuetify({
 
 app.use(VueGoogleMaps, {
     load: {
-        key: process.env.VUE_APP_GOOGLE_MAPS_API_KEY,
+        key: AIzaSyC1OE5TMy42rVj4wjOXbyQSYNz7i6Hhe4c,
         libraries: 'places',
     },
 }),
